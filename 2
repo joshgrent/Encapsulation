@@ -1,0 +1,14 @@
+class Car:
+    def __init__(self):
+        self.__speed = 0  
+
+    def accelerate(self, increment):
+        if increment > 0:
+            self.__speed += increment
+
+    def brake(self, decrement):
+        if decrement > 0 and self.__speed - decrement >= 0:
+            self.__speed -= decrement
+
+    def get_speed(self):
+        return self.__speed
